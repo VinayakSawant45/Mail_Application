@@ -24,6 +24,7 @@ public class EmailController {
         log.info("Request received");
         log.info("Request is {}",emailRequestDto);
         sendEmailService.sendEmail(emailRequestDto);
+        log.info("Gmail sent successfully");
         return new EmailResponseDto("Send Successfully");
     }
 }
